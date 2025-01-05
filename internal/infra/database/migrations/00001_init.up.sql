@@ -1,0 +1,15 @@
+BEGIN;
+
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+CREATE TABLE IF NOT exists orders (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    price FLOAT NOT NULL,
+    tax FLOAT NOT NULL,
+    final_price FLOAT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    active BOOLEAN DEFAULT TRUE
+);
+
+
+COMMIT;
