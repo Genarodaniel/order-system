@@ -1,5 +1,5 @@
 package entity
 
-type IOrderRepository interface {
+type OrderRepositoryInterface interface {
 	Save(order *Order) error
 }

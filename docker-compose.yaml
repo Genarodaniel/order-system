@@ -5,6 +5,8 @@ services:
     environment:
       POSTGRES_PASSWORD: changeme
       POSTGRES_USER: orders_api
+      POSTGRES_DB: orders
+      SCHEMA: orders
     volumes:
       - .docker/postgres:/data/postgres
     ports:
